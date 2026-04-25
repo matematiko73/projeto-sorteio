@@ -1,0 +1,23 @@
+{
+  "name": "projeto-sorteio",
+  "version": "1.0.0",
+  "description": "App em que o sortudo será o último a ser sorteado, ou seja, o \"azarado mais sortudo\"!",
+  "main": "src/index.ts",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "start": "npx tsx ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matematiko73/projeto-sorteio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matematiko73/projeto-sorteio/issues"
+  },
+  "homepage": "https://github.com/matematiko73/projeto-sorteio#readme"
+}
