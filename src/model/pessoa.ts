@@ -6,7 +6,7 @@
 //regras dentro de seu corpo
 
 export default class Pessoa{
-    constructor(readonly nome: string, readonly email: string){}
+    constructor(readonly nome: string, readonly email: string) {}
 
     toString(){
         return `${this.nome} <${this.email}> `;
