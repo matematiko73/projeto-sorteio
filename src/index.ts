@@ -2,20 +2,25 @@ import carregarPessoas from "./function/carregar-pessoas";
 import sortearAzarado from "./function/sortear-azarado";
 import terminal from "./ui/terminal";
 
-const pessoas = carregarPessoas("src/data/dados.csv");
+async function rodar(){
 
-//pessoas.forEach(p => console.log(p.toString()));
+    const pessoas = carregarPessoas("src/data/dados.csv");
 
-console.log(`Vamos para o sorteio final!!!`);
-const azarado = sortearAzarado(pessoas);
+    //pessoas.forEach(p => console.log(p.toString()));
 
-terminal.clear();
+    console.log(`Vamos para o sorteio final!!!`);
+    const duracaoEmSegundos = 20;
+    const azarado = await sortearAzarado(pessoas, duracaoEmSegundos);
 
-terminal.white("\n\nO").brightRed(" AZARADO");
-terminal.bold.brightGreen(" MAIS SORTUDO").white(" é: \n");
-terminal.bold.brightYellow(azarado.toString());
-terminal("\n\n 🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉");
+    terminal.clear();
 
-console.log();
+    terminal.white("\n\nO").brightRed(" AZARADO");
+    terminal.bold.brightGreen(" MAIS SORTUDO").white(" é: \n");
+    terminal.bold.brightYellow(azarado.toString());
+    terminal("\n\n 🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉");
 
+    console.log();
+}
+
+rodar()
 //console.log(azarado.toString());
