@@ -8,7 +8,19 @@
 export default class Pessoa{
     constructor(readonly nome: string, readonly email: string) {}
 
+    //utilizando REGEX - Expressão Regular, 
+    //criaremos grupos de captura
+    //para mascarar o email da pessoa
+
+    get emailMascarado(){
+        const regex = /(.{1,3})(.*)(@.*)/;
+        return this.email.replace(regex, (_, g1, g2, g3) =>{
+            return g1 + "***" + g3;
+        })
+    }
+
+
     toString(){
-        return `${this.nome} <${this.email}> `;
+        return `${this.nome} <${this.emailMascarado}> `;
     }
 }
